@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Header from '$lib/components/common/Header.svelte';
-	import Footer from '$lib/components/common/Footer.svelte';
+	import Header from '$lib/components/common/Header.svelte'
+	import Footer from '$lib/components/common/Footer.svelte'
 </script>
 
 <Header />
@@ -12,5 +12,6 @@
 <Footer />
 
 <style lang="scss" global>
+	@import 'normalize.css';
 	@import '../scss/main';
 </style>

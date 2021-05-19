@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/stores'
 </script>
 
 <nav>
@@ -7,7 +7,5 @@
 		<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
 		<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 		<li><a href="/users">User List</a></li>
-		<li><a href="/users/new">New User</a></li>
-		<li><a href="/users/123">Existing User</a></li>
 	</ul>
 </nav>

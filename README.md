@@ -8,5 +8,7 @@ Split your expenses between group easily
 - Typescript
 - ESLint
 - Prettier
+
 - SCSS
--
+- Normalize.css
+- sass-basis
