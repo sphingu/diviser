@@ -1,6 +1,23 @@
+<script lang="ts" context="module">
+	import { client } from '$lib/graphql'
+
+	export const load: Load = async () => {
+		return {
+			props: {
+				client
+			}
+		}
+	}
+</script>
+
 <script lang="ts">
-	import Header from '$lib/components/common/Header.svelte'
-	import Footer from '$lib/components/common/Footer.svelte'
+	import { Header, Footer } from '$lib/components'
+	import type { Load } from '@sveltejs/kit'
+	import { setClient } from 'svelte-apollo'
+
+	export let client
+
+	setClient(client)
 </script>
 
 <Header />

@@ -17,3 +17,7 @@ npm run build
 # preview build artifact on local
 npm run preview
 ```
+
+```bash
+npx npm-check-updates -u
+```
