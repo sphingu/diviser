@@ -1,13 +1,49 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-</script>
 
-<h1>Header</h1>
+	type NavigationItemType = {
+		name: string
+		path: string
+		prefetch: boolean
+	}
+
+	const navigationItems: NavigationItemType[] = [
+		{
+			path: '/',
+			name: 'Home',
+			prefetch: true
+		},
+		{
+			path: '/about',
+			name: 'About',
+			prefetch: true
+		},
+		{
+			path: '/users',
+			name: 'User List',
+			prefetch: false
+		}
+	]
+</script>
 
 <nav>
 	<ul>
-		<!-- <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-		<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li> -->
-		<!-- <li><a href="/users">User List</a></li> -->
+		{#each navigationItems as item}
+			<li class:active={$page.path === item.path}>
+				<a href={item.path}>{item.name}</a>
+			</li>
+		{/each}
 	</ul>
 </nav>
+
+<style lang="scss">
+	nav {
+		background-color: rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		.active {
+			a {
+				color: white;
+			}
+		}
+	}
+</style>

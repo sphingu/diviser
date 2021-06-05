@@ -5,31 +5,31 @@
 
 	export let users: IUser[]
 
-	const addUserHandler = () => {
+	const navigateToAddUser = () => {
 		goto('/users/new')
 	}
-	const editUserHandler = (userId) => {
+	const navigateToEditUser = (userId) => {
 		goto(`/users/${userId}`)
 	}
 </script>
 
 <h1>User List</h1>
 
-<Button on:click={addUserHandler}>Add User</Button>
+<Button on:click={navigateToAddUser}>Add User</Button>
 
 <table>
 	{#if users.length}
 		{#each users as user}
 			<tr>
 				<td>
-					ID: {user.id}, Email: {user.email}, name: {user.name}
+					ID: {user.id},<br /> Email: {user.email},<br /> name: {user.name}
 				</td>
 				<td>
-					<Button on:click={() => editUserHandler(user.id)}>Edit User</Button>
+					<Button on:click={() => navigateToEditUser(user.id)}>Edit User</Button>
 				</td>
 			</tr>
 		{/each}
 	{:else}
-		No Users
+		No users found
 	{/if}
 </table>

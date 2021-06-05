@@ -2,12 +2,16 @@
 	import { goto } from '$app/navigation'
 
 	import { Form, Field, FormButtons, Button } from '$lib/components'
+	import { getFormFields } from '$lib/helpers/user'
+
+	import type { IUser } from '$lib/helpers/user/types'
 	import type { FieldType } from '$lib/types'
 
 	export let isAdd: boolean
-	export let fields: FieldType[]
-
+	export let user: Partial<IUser> = {}
 	export let onSubmit: (value: Record<string, unknown>) => Promise<void>
+
+	let fields: FieldType[] = getFormFields(user)
 
 	$: title = isAdd ? 'New User' : 'Edit User'
 	$: submitText = isAdd ? 'Create' : 'Update'

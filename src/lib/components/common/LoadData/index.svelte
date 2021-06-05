@@ -3,10 +3,10 @@
 	import type { DocumentNode } from '@apollo/client/core'
 
 	export let query: DocumentNode
-	export let variables: Record<string, unknown> | undefined
+	export let variables: Record<string, unknown> = undefined
 	export let value
 
-	$: request = variables ? svelteQuery(query, { variables }) : svelteQuery(query)
+	$: request = svelteQuery(query, { variables })
 
 	$: value = $request.data
 </script>

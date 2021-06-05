@@ -1,10 +1,9 @@
 <script>
 	import { UserAddEdit } from '$lib/components/User'
-	import { getFormFields } from '$lib/helpers/user'
 
-	const handleSubmit = async (values) => {
+	const addUser = async (values) => {
 		console.log(values)
 	}
 </script>
 
-<UserAddEdit isAdd={true} fields={getFormFields()} onSubmit={handleSubmit} />
+<UserAddEdit isAdd={true} onSubmit={addUser} />

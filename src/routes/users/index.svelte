@@ -7,7 +7,5 @@
 </script>
 
 <LoadData query={ALL_USERS} bind:value={data}>
-	<span slot="loading">My Custom Loading...</span>
-	<span style="color: red" slot="error">My Custom Error...</span>
 	<UserList users={data.users} />
 </LoadData>
