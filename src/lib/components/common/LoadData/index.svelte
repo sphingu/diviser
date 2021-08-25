@@ -9,6 +9,10 @@
 	$: request = svelteQuery(query, { variables })
 
 	$: value = $request.data
+
+	export function reload() {
+		request.refetch()
+	}
 </script>
 
 {#if $request.loading}

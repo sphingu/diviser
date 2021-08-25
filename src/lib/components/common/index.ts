@@ -1,6 +1,7 @@
 import Form from './Form/index.svelte'
 import Field from './Form/Field.svelte'
-import FormButtons from './Form/Buttons.svelte'
+import FormSubmitButton from './Form/SubmitButton.svelte'
+import FormResetButton from './Form/ResetButton.svelte'
 
 import LoadData from './LoadData/index.svelte'
 import Toast from './Toast/index.svelte'
@@ -15,7 +16,8 @@ export {
 	// components
 	Form,
 	Field,
-	FormButtons,
+	FormSubmitButton,
+	FormResetButton,
 	LoadData,
 	Toast,
 	Button,

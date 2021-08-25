@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation'
 
-	import { Form, Field, FormButtons, Button } from '$lib/components'
+	import { Form, Field, FormSubmitButton, FormResetButton, Button } from '$lib/components'
 	import { getFormFields } from '$lib/helpers/user'
 
 	import type { IUser } from '$lib/helpers/user/types'
@@ -25,7 +25,9 @@
 		<Field name="name" />
 		<Field name="email" />
 
-		<FormButtons {submitText} {isSubmitting} />
+		<FormSubmitButton {isSubmitting}>{submitText}</FormSubmitButton>
+
+		<FormResetButton {isSubmitting} />
 	</Form>
 </div>
 
