@@ -4,4 +4,4 @@
 
 <svelte:head><title>Diviser</title></svelte:head>
 
-<h1>Diviser Home Page</h1>
+<h1 class="title">Home Page</h1>

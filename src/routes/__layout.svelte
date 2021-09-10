@@ -9,12 +9,11 @@
 </script>
 
 <Header />
-
-<main>
-	<slot />
-</main>
-
-<Footer />
+<section class="section">
+	<div class="container">
+		<slot />
+	</div>
+</section>
 
 <style lang="scss" global>
 	@import 'normalize.css';
