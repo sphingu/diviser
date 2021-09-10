@@ -17,6 +17,5 @@
 </script>
 
 <LoadData bind:reload query={ALL_USERS} bind:value={data}>
-	<button on:click={reload}>Reload</button>
 	<UserList users={data.users} />
 </LoadData>

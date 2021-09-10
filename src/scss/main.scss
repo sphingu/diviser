@@ -2,12 +2,17 @@
 //  @import "@fontsource/source-sans-pro";
 @import 'sass-basis/basis-core';
 
+
+@import 'component/common';
 @import 'variables/color';
 @import 'component/btn';
 @import 'component/bg';
 @import 'component/loader';
 @import 'component/input';
 @import 'component/toast';
+@import 'component/footer';
+@import 'component/header';
+@import 'component/sidebar';
 
 // Import full Spectre source code
 // @import "node_modules/spectre.css/src/spectre";
@@ -33,4 +38,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 0%;
+}
+#root {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 0%;
+	> main {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+	}
 }

@@ -1,0 +1,72 @@
+@import './common';
+
+header {
+	@extend .border-box;
+	border-width: 0 0 1px;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	h1 {
+		font-size: 2em;
+		margin: 0 0 0 0.5em;
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-size: 400% 400%;
+		animation: gradient 10s ease infinite;
+	}
+	.hamburger {
+		cursor: pointer;
+		padding: 0.5em;
+		border: none;
+		display: flex;
+		z-index: 1;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			color: black;
+			background-color: #a1acb38c;
+		}
+		svg {
+			min-height: 24px;
+			transition: transform 0.3s ease-in-out;
+			line {
+				stroke: currentColor;
+				stroke-width: 3;
+				transition: transform 0.3s ease-in-out;
+			}
+		}
+		&.open {
+			color: black;
+			background-color: #a1acb38c;
+			svg {
+				transform: scale(0.9);
+				line {
+					opacity: 0;
+					&:first-child {
+						opacity: 1;
+						transform: translate(6px, 0px) rotate(45deg);
+					}
+					&:last-child {
+						opacity: 1;
+						transform: translate(-12px, 9px) rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
