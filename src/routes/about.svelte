@@ -18,4 +18,4 @@
 	<title>About</title>
 </svelte:head>
 
-<h1>Diviser about page</h1>
+<h1 class="title">About Page</h1>

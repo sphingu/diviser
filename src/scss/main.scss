@@ -1,9 +1,20 @@
 @import './variables';
 @import '../../node_modules/bulma/bulma.sass';
 
+html {
+  overflow: auto;
+}
+
 body {
 	min-height: 100vh;
-	background: linear-gradient(-45deg, #0a0303fa, #171735, #132b3e, #0f1329);
-	background-size: 400% 400%;
-	background-size: contain;
+	background-color: #61e8af57;
+	// background: linear-gradient(-45deg, #0a0303fa, #171735, #132b3e, #0f1329);
+	// background-size: 400% 400%;
+	// background-size: contain;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
