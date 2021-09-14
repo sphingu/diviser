@@ -29,7 +29,7 @@
 		padding-bottom: 0;
 		.container {
 			border-width: 0 1px;
-			border-style: dashed;
+			border-style: none;
 			padding: 1em;
 		}
 	}

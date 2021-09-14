@@ -2,36 +2,34 @@
 	import { setClient } from 'svelte-apollo'
 
 	import { client } from '$lib/graphql'
-	import { Header, Footer } from '$lib/components'
+	import { Header, Footer, Breadcrumb } from '$lib/components'
 
 	// TODO: should be called only once for whole app
 	setClient(client)
 </script>
 
 <Header />
+<div id="main">
+	<Breadcrumb />
 
-<section class="section content-wrapper">
-	<div class="container">
-		<slot />
-	</div>
-</section>
+	<section class="section pb-0 pt-0">
+		<div class="container">
+			<div class="box">
+				<slot />
+			</div>
+		</div>
+	</section>
+</div>
 
 <Footer />
 
 <style lang="scss" global>
 	@import 'normalize.css';
 	@import '../scss/main';
-	.content-wrapper {
+	#main {
 		flex-grow: 1;
-		display: flex;
-		padding-top: 0;
-		padding-bottom: 0;
-		.container {
-			flex-grow: 1;
-			border-width: 0 1px;
-			border-style: dashed;
-			padding-top: 3em;
-			padding-bottom: 3em;
-		}
+	}
+	.box {
+		margin: 1em 0;
 	}
 </style>

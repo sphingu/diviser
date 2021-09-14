@@ -35,6 +35,7 @@
 		"bulma": "^0.9.3",
 		"graphql": "^15.5.0",
 		"normalize.css": "^8.0.1",
+		"remixicon": "^2.5.0",
 		"svelte-apollo": "github:samhingu/svelte-apollo"
 	}
 }

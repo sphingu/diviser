@@ -7,6 +7,7 @@ import LoadData from './LoadData/index.svelte'
 import Toast from './Toast/index.svelte'
 import Button from './Button.svelte'
 import Footer from './Footer.svelte'
+import Breadcrumb from './Breadcrumb.svelte'
 import Header from './Header/index.svelte'
 // import Header from './Header1.svelte'
 import Input from './Input.svelte'
@@ -25,6 +26,7 @@ export {
 	Footer,
 	Header,
 	Input,
+	Breadcrumb,
 	//helpers
 	toastHelpers
 }

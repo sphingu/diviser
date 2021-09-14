@@ -1,13 +1,18 @@
 @import './variables';
 @import '../../node_modules/bulma/bulma.sass';
+@import '../../node_modules/remixicon/fonts/remixicon.css';
+
+:root {
+	--bgcolor: #61e8af57;
+}
 
 html {
-  overflow: auto;
+	overflow: auto;
 }
 
 body {
 	min-height: 100vh;
-	background-color: #61e8af57;
+	background-color: var(--bgcolor);
 	// background: linear-gradient(-45deg, #0a0303fa, #171735, #132b3e, #0f1329);
 	// background-size: 400% 400%;
 	// background-size: contain;

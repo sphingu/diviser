@@ -5,6 +5,10 @@
 	const toggleMenuActive = () => {
 		isMenuActive = !isMenuActive
 	}
+
+	const onColorChange = (e) => {
+		document.documentElement.style.setProperty('--bgcolor', e.target.value)
+	}
 </script>
 
 <section class="section">
@@ -48,13 +52,11 @@
 				</div>
 			</div>
 
-			<!-- <div class="navbar-end">
+			<div class="navbar-end">
 				<div class="navbar-item">
-					<div class="buttons">
-						<button class="button">Log in</button>
-					</div>
+					<input type="color" id="favcolor" class="inputcolor" on:input={onColorChange} />
 				</div>
-			</div> -->
+			</div>
 		</nav>
 	</div>
 </section>
@@ -68,7 +70,7 @@
 	.navbar {
 		background-color: transparent;
 		border-width: 0 1px 0 1px;
-		border-style: dashed;
+		border-style: none;
 		.navbar-burger {
 			height: auto;
 		}
