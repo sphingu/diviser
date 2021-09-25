@@ -3,7 +3,7 @@
 
 	import { goto } from '$app/navigation'
 	import { ADD_USER } from '$lib/graphql'
-	import { UserAddEdit } from '$lib/components/User'
+	import { UserAddEdit, PageHeader } from '$lib/components'
 
 	import type { IUser } from '$lib/helpers/user/types'
 
@@ -20,4 +20,5 @@
 	}
 </script>
 
+<PageHeader backUrl="/users" title="Add User" />
 <UserAddEdit isAdd={true} onSubmit={addUser} />

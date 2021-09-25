@@ -10,7 +10,7 @@
 
 <Header />
 <div id="main">
-	<Breadcrumb />
+	<!-- <Breadcrumb /> -->
 
 	<section class="section pb-0 pt-0">
 		<div class="container">
@@ -31,5 +31,6 @@
 	}
 	.box {
 		margin: 1em 0;
+		box-shadow: 0 10px 15px 0 rgb(90 116 148 / 40%);
 	}
 </style>

@@ -4,6 +4,11 @@
 	export let isSubmitting: boolean = false
 </script>
 
-<Button type="reset" kind="secondary" disabled={isSubmitting}>
-	<slot>Reset</slot>
-</Button>
+<button type="reset" class="button" disabled={isSubmitting}>
+	<span class="icon">
+		<i class="ri-restart-line" />
+	</span>
+	<span>
+		<slot>Reset</slot>
+	</span>
+</button>

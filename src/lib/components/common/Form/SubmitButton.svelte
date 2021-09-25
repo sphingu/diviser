@@ -5,11 +5,16 @@
 	export let isSubmitting: boolean = false
 </script>
 
-<Button
+<button
 	type="submit"
-	kind="primary"
+	class="button is-success"
 	disabled={!($isFormValid && $isFormModified)}
-	loading={isSubmitting}
+	class:is-loading={isSubmitting}
 >
-	<slot>Submit</slot>
-</Button>
+	<span class="icon">
+		<i class="ri-save-3-line" />
+	</span>
+	<span>
+		<slot>Submit</slot>
+	</span>
+</button>

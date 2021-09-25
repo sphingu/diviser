@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import { UserAddEdit } from '$lib/components/User'
+	import { UserAddEdit, PageHeader } from '$lib/components'
 
 	// TODO: get data from database
 	const user = {
-		id: $page.params.userId,
+		id: $page.params.id,
 		email: 'test@gmail.com',
 		name: 'test name'
 	}
@@ -15,4 +15,5 @@
 	}
 </script>
 
+<PageHeader backUrl="/users" title="Edit User" />
 <UserAddEdit isAdd={false} {user} onSubmit={updateUser} />

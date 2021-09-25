@@ -20,7 +20,7 @@
 	label={field.label}
 	value={field.value}
 	invalid={Boolean(field.error)}
-	errorMessage={field.error}
+	helpText={field.error}
 	on:blur={onBlur}
 	on:input={onChange}
 />

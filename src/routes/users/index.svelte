@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { goto } from '$app/navigation'
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
 
 	import { ALL_USERS } from '$lib/graphql'
-	import { LoadData, UserList, Button } from '$lib/components'
+	import { LoadData, UserList, PageHeader, LinkButton } from '$lib/components'
 	import type { IUser } from '$lib/helpers/user/types'
 
 	let data: { users: IUser[] }
@@ -15,19 +14,15 @@
 			reload()
 		}
 	})
-
-	const navigateToAddUser = () => {
-		goto('/users/new')
-	}
 </script>
 
-<h1 class="title">User List</h1>
-
-<button class="button is-medium is-link is-light" on:click={navigateToAddUser}>
-	<span class="icon">
-		<i class="ri-user-add-line ri-xl" />
-	</span>
-</button>
+<PageHeader title="User List" />
+<div class="block">
+	<LinkButton path="/users/new">
+		<i slot="icon" class="ri-add-circle-line ri-xl" />
+		<span>Add User</span>
+	</LinkButton>
+</div>
 
 <LoadData bind:reload query={ALL_USERS} bind:value={data}>
 	<UserList users={data.users} />

@@ -9,8 +9,10 @@ import Button from './Button.svelte'
 import Footer from './Footer.svelte'
 import Breadcrumb from './Breadcrumb.svelte'
 import Header from './Header/index.svelte'
-// import Header from './Header1.svelte'
 import Input from './Input.svelte'
+import BackButton from './Buttons/BackButton.svelte'
+import LinkButton from './Buttons/LinkButton.svelte'
+import PageHeader from './PageHeader.svelte'
 
 import * as toastHelpers from './Toast/helpers'
 
@@ -27,6 +29,9 @@ export {
 	Header,
 	Input,
 	Breadcrumb,
+	BackButton,
+	LinkButton,
+	PageHeader,
 	//helpers
 	toastHelpers
 }

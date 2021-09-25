@@ -9,6 +9,39 @@
 	const onColorChange = (e) => {
 		document.documentElement.style.setProperty('--bgcolor', e.target.value)
 	}
+
+	type PageType = {
+		path: string
+		title: string
+	}
+	type NavigationItemType = {
+		title: string
+		path: string
+		prefetch: boolean
+	}
+
+	const navigationItems: NavigationItemType[] = [
+		{
+			path: '/',
+			title: 'Home',
+			prefetch: true
+		},
+		{
+			path: '/month-wise',
+			title: 'Monthly Report',
+			prefetch: true
+		},
+		{
+			path: '/users',
+			title: 'User List',
+			prefetch: false
+		},
+		{
+			path: '/transactions',
+			title: 'Transaction List',
+			prefetch: false
+		}
+	]
 </script>
 
 <section class="section">
@@ -25,30 +58,16 @@
 
 			<div class="navbar-menu" class:is-active={isMenuActive}>
 				<div class="navbar-start">
-					<a
-						class="navbar-item"
-						href="/"
-						class:is-active={$page.path === '/'}
-						on:click={toggleMenuActive}
-					>
-						<span> Home </span>
-					</a>
-					<a
-						class="navbar-item"
-						href="/about"
-						class:is-active={$page.path === '/about'}
-						on:click={toggleMenuActive}
-					>
-						<span> About </span>
-					</a>
-					<a
-						class="navbar-item"
-						href="/users"
-						class:is-active={$page.path === '/users'}
-						on:click={toggleMenuActive}
-					>
-						<span> Users </span>
-					</a>
+					{#each navigationItems as item}
+						<a
+							class="navbar-item"
+							href={item.path}
+							class:is-active={$page.path === item.path}
+							on:click={toggleMenuActive}
+						>
+							{item.title}
+						</a>
+					{/each}
 				</div>
 			</div>
 
